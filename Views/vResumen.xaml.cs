@@ -36,6 +36,7 @@ public partial class vResumen : ContentPage
 
     private async void btnNuevoRegistro_Clicked(object sender, EventArgs e)
     {
+        await Navigation.PopToRootAsync();
         await Navigation.PushAsync(new vRegistro(usuarioConectado));
     }
 
@@ -43,6 +44,7 @@ public partial class vResumen : ContentPage
     {
         await Navigation.PopToRootAsync();
     }
+
 
     private async void btnExportar_Clicked(object sender, EventArgs e)
     {
@@ -61,15 +63,16 @@ public partial class vResumen : ContentPage
                 "Pago mensual: $" + lblPagoMensual.Text + "\n" +
                 "Pago Total: $" + lblPagoTotal.Text;
 
+            string carpeta = @"C:\Users\Master\Documents\textsExamen";
+
+            Directory.CreateDirectory(carpeta);
+
             string nombreArchivo =
                 "ResumenSocio_" +
                 DateTime.Now.ToString("yyyyMMdd_HHmmss_fff") +
                 ".txt";
 
-            string ruta = Path.Combine(
-                FileSystem.AppDataDirectory,
-                nombreArchivo
-            );
+            string ruta = Path.Combine(carpeta, nombreArchivo);
 
             await File.WriteAllTextAsync(
                 ruta,
@@ -78,14 +81,20 @@ public partial class vResumen : ContentPage
             );
 
             await DisplayAlert(
-                "Archivo exportado", "Nombre: " + nombreArchivo + "\n" + "Ruta: " + ruta, "Aceptar"
+                "Archivo exportado",
+                "Nombre: " + nombreArchivo + "\n" +
+                "Ruta: " + ruta,
+                "Aceptar"
             );
         }
         catch (Exception ex)
         {
             await DisplayAlert(
-                "Error", "No se pudo exportar el archivo: " + ex.Message, "Aceptar"
+                "Error",
+                "No se pudo exportar el archivo: " + ex.Message,
+                "Aceptar"
             );
         }
     }
+
 }

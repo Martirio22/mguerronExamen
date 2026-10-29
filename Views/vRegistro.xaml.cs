@@ -99,6 +99,7 @@ public partial class vRegistro : ContentPage
         txtPagoMensual.Text = pagoMensual.ToString("F2");
     }
 
+
     private async void btnVerResumen_Clicked(object sender, EventArgs e)
     {
         if (!await ValidarDatos())
@@ -107,27 +108,22 @@ public partial class vRegistro : ContentPage
         ObtenerMontoInicial(out decimal montoInicial);
 
         decimal pagoMensual = CalcularPagoMensual(montoInicial);
-        decimal saldoRestante = costoMembresia - montoInicial;
-        decimal totalCuotas = pagoMensual * numeroCuotas;
-        decimal totalPagar = montoInicial + totalCuotas;
+        decimal pagoTotal = montoInicial + (pagoMensual * numeroCuotas);
 
         txtPagoMensual.Text = pagoMensual.ToString("F2");
 
-        string resumen =
-            "Usuario conectado: " + usuarioConectado + "\n" +
-            "Nombre: " + txtNombre.Text!.Trim() + "\n" +
-            "Apellido: " + txtApellido.Text!.Trim() + "\n" +
-            "Edad: " + txtEdad.Text + "\n" +
-            "Fecha de inicio: " + dtpFechaInicio.Date?.ToString("dd/MM/yyyy") + "\n" +
-            "Plan: " + pckPlan.SelectedItem + "\n" +
-            "Casillero: " + (swCasillero.IsToggled ? "Sí" : "No") + "\n" +
-            "Costo membresía: $" + costoMembresia.ToString("F2") + "\n" +
-            "Monto inicial: $" + montoInicial.ToString("F2") + "\n" +
-            "Saldo restante: $" + saldoRestante.ToString("F2") + "\n" +
-            "Número de cuotas: " + numeroCuotas + "\n" +
-            "Pago mensual: $" + pagoMensual.ToString("F2") + "\n" +
-            "Total a pagar: $" + totalPagar.ToString("F2");
-
-        await DisplayAlert("Resumen del socio", resumen, "Aceptar");
+        await Navigation.PushAsync(new vResumen(
+            usuarioConectado,
+            txtNombre.Text!.Trim(),
+            txtApellido.Text!.Trim(),
+            int.Parse(txtEdad.Text!),
+            dtpFechaInicio.Date ?? DateTime.Today,
+            pckPlan.SelectedItem!.ToString()!,
+            swCasillero.IsToggled,
+            montoInicial,
+            pagoMensual,
+            pagoTotal
+        ));
     }
+
 }

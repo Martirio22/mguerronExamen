@@ -2,210 +2,215 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mguerronExamen.Views.vRegistro"
-             Title="vRegistro">
-    <VerticalStackLayout Padding="20"
-                         Spacing="18">
+             Title="Registro"
+             BackgroundColor="#F5F6FA">
 
-        <Border BackgroundColor="#E8EAF6"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 10"
-                Padding="12">
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="18">
 
-            <Label x:Name="lblUsuarioConectado"
-                   Text="Usuario conectado:"
-                   TextColor="#283593"
+            <Border BackgroundColor="#E8EAF6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10"
+                    Padding="12">
+
+                <Label x:Name="lblUsuarioConectado"
+                       Text="Usuario conectado:"
+                       TextColor="#283593"
+                       FontAttributes="Bold"
+                       FontSize="14" />
+
+            </Border>
+
+            <Label Text="REGISTRO"
+                   TextColor="Blue"
+                   FontSize="22"
                    FontAttributes="Bold"
-                   FontSize="14" />
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
 
-        </Border>
+            <Border BackgroundColor="White"
+                    Stroke="#E0E0E0"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="12">
 
-        <Label Text="REGISTRO"
-               TextColor="Blue"
-               FontSize="22"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center" />
+                <Grid RowSpacing="8"
+                      ColumnSpacing="8">
 
-        <Border BackgroundColor="White"
-                Stroke="#E0E0E0"
-                StrokeShape="RoundRectangle 12"
-                Padding="12">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-            <Grid RowSpacing="8"
-                  ColumnSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                    <Label Text="Nombre"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           Grid.Row="0"
+                           Grid.Column="0" />
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+                    <Label Text="Apellido"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           Grid.Row="0"
+                           Grid.Column="1" />
 
-                <Label Text="Nombre"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       Grid.Row="0"
-                       Grid.Column="0" />
+                    <Label Text="Edad"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           Grid.Row="0"
+                           Grid.Column="2" />
 
-                <Label Text="Apellido"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       Grid.Row="0"
-                       Grid.Column="1" />
+                    <Entry x:Name="txtNombre"
+                           Placeholder="Ingresar Nombre"
+                           FontSize="13"
+                           BackgroundColor="#F5F6FA"
+                           TextColor="#222222"
+                           Grid.Row="1"
+                           Grid.Column="0" />
 
-                <Label Text="Edad"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       Grid.Row="0"
-                       Grid.Column="2" />
+                    <Entry x:Name="txtApellido"
+                           Placeholder="Ingresar Apellido"
+                           FontSize="13"
+                           BackgroundColor="#F5F6FA"
+                           TextColor="#222222"
+                           Grid.Row="1"
+                           Grid.Column="1" />
 
-                <Entry x:Name="txtNombre"
-                       Placeholder="Ingresar Nombre"
-                       FontSize="13"
-                       BackgroundColor="#F5F6FA"
-                       TextColor="#222222"
-                       Grid.Row="1"
-                       Grid.Column="0" />
+                    <Entry x:Name="txtEdad"
+                           Placeholder="Edad"
+                           Keyboard="Numeric"
+                           FontSize="13"
+                           BackgroundColor="#F5F6FA"
+                           TextColor="#222222"
+                           Grid.Row="1"
+                           Grid.Column="2" />
 
-                <Entry x:Name="txtApellido"
-                       Placeholder="Ingresar Apellido"
-                       FontSize="13"
-                       BackgroundColor="#F5F6FA"
-                       TextColor="#222222"
-                       Grid.Row="1"
-                       Grid.Column="1" />
+                </Grid>
+            </Border>
 
-                <Entry x:Name="txtEdad"
-                       Placeholder="Edad"
-                       Keyboard="Numeric"
-                       FontSize="13"
-                       BackgroundColor="#F5F6FA"
-                       TextColor="#222222"
-                       Grid.Row="1"
-                       Grid.Column="2" />
+            <Border BackgroundColor="White"
+                    Stroke="#E0E0E0"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="15">
 
-            </Grid>
-        </Border>
+                <Grid RowSpacing="15"
+                      ColumnSpacing="12">
 
-        <Border BackgroundColor="White"
-                Stroke="#E0E0E0"
-                StrokeShape="RoundRectangle 12"
-                Padding="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-            <Grid RowSpacing="15"
-                  ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                    <Label Text="Fecha de inicio"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Row="0"
+                           Grid.Column="0" />
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+                    <DatePicker x:Name="dtpFechaInicio"
+                                BackgroundColor="#F5F6FA"
+                                TextColor="#222222"
+                                Format="dd/MM/yyyy"
+                                Grid.Row="0"
+                                Grid.Column="1" />
 
-                <Label Text="Fecha de inicio"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       Grid.Row="0"
-                       Grid.Column="0" />
+                    <Label Text="Plan"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Row="1"
+                           Grid.Column="0" />
 
-                <DatePicker x:Name="dtpFechaInicio"
+                    <Picker x:Name="pckPlan"
+                            Title="Seleccionar plan"
                             BackgroundColor="#F5F6FA"
                             TextColor="#222222"
-                            Format="dd/MM/yyyy"
-                            Grid.Row="0"
-                            Grid.Column="1" />
+                            Grid.Row="1"
+                            Grid.Column="1">
 
-                <Label Text="Plan"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       Grid.Row="1"
-                       Grid.Column="0" />
+                        <Picker.Items>
+                            <x:String>Musculación</x:String>
+                            <x:String>Cardio</x:String>
+                            <x:String>Crossfit</x:String>
+                            <x:String>Full</x:String>
+                        </Picker.Items>
 
-                <Picker x:Name="pckPlan"
-                        Title="Seleccionar plan"
-                        BackgroundColor="#F5F6FA"
-                        TextColor="#222222"
-                        Grid.Row="1"
-                        Grid.Column="1">
+                    </Picker>
 
-                    <Picker.Items>
-                        <x:String>Musculación</x:String>
-                        <x:String>Cardio</x:String>
-                        <x:String>Crossfit</x:String>
-                        <x:String>Full</x:String>
-                    </Picker.Items>
+                    <Label Text="Casillero"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Row="2"
+                           Grid.Column="0" />
 
-                </Picker>
+                    <Switch x:Name="swCasillero"
+                            OnColor="#3949AB"
+                            ThumbColor="White"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            HorizontalOptions="Start" />
 
-                <Label Text="Casillero"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       Grid.Row="2"
-                       Grid.Column="0" />
+                    <Label Text="Monto Inicial"
+                           TextColor="#333333"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Row="3"
+                           Grid.Column="0" />
 
-                <Switch x:Name="swCasillero"
-                        OnColor="#3949AB"
-                        ThumbColor="White"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        HorizontalOptions="Start" />
+                    <Entry x:Name="txtMontoInicial"
+                           Placeholder="120 - 600"
+                           Keyboard="Numeric"
+                           BackgroundColor="#F5F6FA"
+                           TextColor="#222222"
+                           Grid.Row="3"
+                           Grid.Column="1" />
 
-                <Label Text="Monto Inicial"
-                       TextColor="#333333"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       Grid.Row="3"
-                       Grid.Column="0" />
+                    <Button Text="Calcular Pago mensual"
+                            BackgroundColor="#3949AB"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="13"
+                            CornerRadius="10"
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Clicked="btnCalcular_Clicked" />
 
-                <Entry x:Name="txtMontoInicial"
-                       Placeholder="120 - 600"
-                       Keyboard="Numeric"
-                       BackgroundColor="#F5F6FA"
-                       TextColor="#222222"
-                       Grid.Row="3"
-                       Grid.Column="1" />
+                    <Entry x:Name="txtPagoMensual"
+                           Placeholder="Pago mensual"
+                           IsReadOnly="True"
+                           BackgroundColor="#ECEFF1"
+                           TextColor="#222222"
+                           Grid.Row="4"
+                           Grid.Column="1" />
 
-                <Button Text="Calcular Pago mensual"
-                        BackgroundColor="#3949AB"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="13"
-                        CornerRadius="10"
-                        Grid.Row="4"
-                        Grid.Column="0"
-                        Clicked="btnCalcular_Clicked" />
+                </Grid>
+            </Border>
 
-                <Entry x:Name="txtPagoMensual"
-                       Placeholder="Pago mensual"
-                       IsReadOnly="True"
-                       BackgroundColor="#ECEFF1"
-                       TextColor="#222222"
-                       Grid.Row="4"
-                       Grid.Column="1" />
+            <Button Text="VER RESUMEN"
+                    BackgroundColor="#673AB7"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="btnVerResumen_Clicked" />
 
-            </Grid>
-        </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 
-        <Button Text="VER RESUMEN"
-                BackgroundColor="#673AB7"
-                TextColor="White"
-                FontAttributes="Bold"
-                CornerRadius="10"
-                HeightRequest="50"
-                Clicked="btnVerResumen_Clicked" />
-
-    </VerticalStackLayout>
 </ContentPage>

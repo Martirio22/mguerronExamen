@@ -2,100 +2,105 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mguerronExamen.Views.vLogin"
-             Title="vLogin">
-    <VerticalStackLayout Spacing="10"
-                         Padding="20"
-                         VerticalOptions="Center">
+             Title="Iniciar sesión"
+             BackgroundColor="#F5F6FA">
 
-        <Image Source="smartfit.jpg"
-               WidthRequest="150"
-               HeightRequest="150"
-               Aspect="AspectFit"
-               HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout Spacing="10"
+                             Padding="20"
+                             VerticalOptions="Center">
 
-        <Label Text="SMARTFIT"
-               TextColor="Purple"
-               FontSize="26"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center" />
+            <Image Source="smartfit.jpg"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
 
-        <Label Text="INICIAR SESIÓN"
-               FontSize="18"
-               TextColor="#555555"
-               HorizontalOptions="Center" />
+            <Label Text="SMARTFIT"
+                   TextColor="Purple"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
 
-        <Border BackgroundColor="White"
-                Stroke="#E0E0E0"
-                StrokeThickness="1"
-                StrokeShape="RoundRectangle 15"
-                Padding="15">
+            <Label Text="INICIAR SESIÓN"
+                   FontSize="18"
+                   TextColor="#555555"
+                   HorizontalOptions="Center" />
 
-            <Grid RowSpacing="18"
-                  ColumnSpacing="10">
+            <Border BackgroundColor="White"
+                    Stroke="#E0E0E0"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 15"
+                    Padding="15">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                <Grid RowSpacing="18"
+                      ColumnSpacing="10">
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                <Label Text="USUARIO:"
-                       FontAttributes="Bold"
-                       TextColor="#333333"
-                       VerticalOptions="Center"
-                       Grid.Row="0"
-                       Grid.Column="0" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
-                <Entry x:Name="txtUsuario"
-                       Placeholder="Ingrese usuario"
-                       BackgroundColor="#F5F6FA"
-                       TextColor="#222222"
-                       PlaceholderColor="#888888"
-                       Grid.Row="0"
-                       Grid.Column="1" />
+                    <Label Text="USUARIO:"
+                           FontAttributes="Bold"
+                           TextColor="#333333"
+                           VerticalOptions="Center"
+                           Grid.Row="0"
+                           Grid.Column="0" />
 
-                <Label Text="CONTRASEÑA:"
-                       FontAttributes="Bold"
-                       TextColor="#333333"
-                       VerticalOptions="Center"
-                       Grid.Row="1"
-                       Grid.Column="0" />
+                    <Entry x:Name="txtUsuario"
+                           Placeholder="Ingrese usuario"
+                           BackgroundColor="#F5F6FA"
+                           TextColor="#222222"
+                           PlaceholderColor="#888888"
+                           Grid.Row="0"
+                           Grid.Column="1" />
 
-                <Entry x:Name="txtContrasena"
-                       Placeholder="Ingrese contraseña"
-                       IsPassword="True"
-                       BackgroundColor="#F5F6FA"
-                       TextColor="#222222"
-                       PlaceholderColor="#888888"
-                       Grid.Row="1"
-                       Grid.Column="1" />
+                    <Label Text="CONTRASEÑA:"
+                           FontAttributes="Bold"
+                           TextColor="#333333"
+                           VerticalOptions="Center"
+                           Grid.Row="1"
+                           Grid.Column="0" />
 
-                <Button Text="INICIAR SESIÓN"
-                        BackgroundColor="#673AB7"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="10"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        Clicked="btnIniciarSesion_Clicked" />
+                    <Entry x:Name="txtContrasena"
+                           Placeholder="Ingrese contraseña"
+                           IsPassword="True"
+                           BackgroundColor="#F5F6FA"
+                           TextColor="#222222"
+                           PlaceholderColor="#888888"
+                           Grid.Row="1"
+                           Grid.Column="1" />
 
-                <Button Text="ACERCA DE"
-                        BackgroundColor="#3949AB"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="10"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Clicked="btnAcercaDe_Clicked" />
+                    <Button Text="INICIAR SESIÓN"
+                            BackgroundColor="#673AB7"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            CornerRadius="10"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Clicked="btnIniciarSesion_Clicked" />
 
-            </Grid>
-        </Border>
+                    <Button Text="ACERCA DE"
+                            BackgroundColor="#3949AB"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            CornerRadius="10"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Clicked="btnAcercaDe_Clicked" />
 
-    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
