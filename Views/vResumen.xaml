@@ -3,113 +3,182 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mguerronExamen.Views.vResumen"
              Title="vResumen">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="20"
+                         Spacing="18">
 
-        <Label x:Name="lblUsuarioConectado"
-               Text="Usuario conectado:" />
+        <Border BackgroundColor="#E8EAF6"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 10"
+                Padding="12">
 
-        <Label Text="RESUMEN" />
+            <Label x:Name="lblUsuarioConectado"
+                   Text="Usuario conectado:"
+                   TextColor="#283593"
+                   FontAttributes="Bold"
+                   FontSize="14" />
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        </Border>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Label Text="RESUMEN"
+               TextColor="#3949AB"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
 
-            <Label Text="Nombre"
-                   Grid.Row="0"
-                   Grid.Column="0" />
+        <Border BackgroundColor="White"
+                Stroke="#E0E0E0"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 12"
+                Padding="15">
 
-            <Label x:Name="lblNombre"
-                   Grid.Row="0"
-                   Grid.Column="1" />
+            <Grid RowSpacing="15"
+                  ColumnSpacing="10">
 
-            <Label Text="Apellido"
-                   Grid.Row="1"
-                   Grid.Column="0" />
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-            <Label x:Name="lblApellido"
-                   Grid.Row="1"
-                   Grid.Column="1" />
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <Label Text="Edad"
-                   Grid.Row="2"
-                   Grid.Column="0" />
+                <Label Text="Nombre"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="0"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblEdad"
-                   Grid.Row="2"
-                   Grid.Column="1" />
+                <Label x:Name="lblNombre"
+                       TextColor="#555555"
+                       Grid.Row="0"
+                       Grid.Column="1" />
 
-            <Label Text="Fecha de inicio"
-                   Grid.Row="3"
-                   Grid.Column="0" />
+                <Label Text="Apellido"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="1"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblFechaInicio"
-                   Grid.Row="3"
-                   Grid.Column="1" />
+                <Label x:Name="lblApellido"
+                       TextColor="#555555"
+                       Grid.Row="1"
+                       Grid.Column="1" />
 
-            <Label Text="Plan"
-                   Grid.Row="4"
-                   Grid.Column="0" />
+                <Label Text="Edad"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="2"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblPlan"
-                   Grid.Row="4"
-                   Grid.Column="1" />
+                <Label x:Name="lblEdad"
+                       TextColor="#555555"
+                       Grid.Row="2"
+                       Grid.Column="1" />
 
-            <Label Text="Casillero"
-                   Grid.Row="5"
-                   Grid.Column="0" />
+                <Label Text="Fecha de inicio"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="3"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblCasillero"
-                   Grid.Row="5"
-                   Grid.Column="1" />
+                <Label x:Name="lblFechaInicio"
+                       TextColor="#555555"
+                       Grid.Row="3"
+                       Grid.Column="1" />
 
-            <Label Text="Monto Inicial"
-                   Grid.Row="6"
-                   Grid.Column="0" />
+                <Label Text="Plan"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="4"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblMontoInicial"
-                   Grid.Row="6"
-                   Grid.Column="1" />
+                <Label x:Name="lblPlan"
+                       TextColor="#555555"
+                       Grid.Row="4"
+                       Grid.Column="1" />
 
-            <Label Text="Pago mensual"
-                   Grid.Row="7"
-                   Grid.Column="0" />
+                <Label Text="Casillero"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="5"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblPagoMensual"
-                   Grid.Row="7"
-                   Grid.Column="1" />
+                <Label x:Name="lblCasillero"
+                       TextColor="#555555"
+                       Grid.Row="5"
+                       Grid.Column="1" />
 
-            <Label Text="Pago Total"
-                   Grid.Row="8"
-                   Grid.Column="0" />
+                <Label Text="Monto Inicial"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="6"
+                       Grid.Column="0" />
 
-            <Label x:Name="lblPagoTotal"
-                   Grid.Row="8"
-                   Grid.Column="1" />
+                <Label x:Name="lblMontoInicial"
+                       TextColor="#555555"
+                       Grid.Row="6"
+                       Grid.Column="1" />
 
-        </Grid>
+                <Label Text="Pago mensual"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Grid.Row="7"
+                       Grid.Column="0" />
 
-        <Button Text="Nuevo registro"
+                <Label x:Name="lblPagoMensual"
+                       TextColor="#555555"
+                       Grid.Row="7"
+                       Grid.Column="1" />
+
+                <Label Text="Pago Total"
+                       FontAttributes="Bold"
+                       TextColor="#3949AB"
+                       FontSize="17"
+                       Grid.Row="8"
+                       Grid.Column="0" />
+
+                <Label x:Name="lblPagoTotal"
+                       TextColor="#3949AB"
+                       FontAttributes="Bold"
+                       FontSize="17"
+                       Grid.Row="8"
+                       Grid.Column="1" />
+
+            </Grid>
+        </Border>
+
+        <Button Text="NUEVO REGISTRO"
+                BackgroundColor="#3949AB"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="48"
                 Clicked="btnNuevoRegistro_Clicked" />
 
-        <Button Text="Cerrar sesión"
-                Clicked="btnCerrarSesion_Clicked" />
-
-        <Button Text="Exportar TXT"
+        <Button Text="EXPORTAR TXT"
+                BackgroundColor="#00897B"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="48"
                 Clicked="btnExportar_Clicked" />
+
+        <Button Text="CERRAR SESIÓN"
+                BackgroundColor="#C62828"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="48"
+                Clicked="btnCerrarSesion_Clicked" />
 
     </VerticalStackLayout>
 </ContentPage>
