@@ -4,9 +4,130 @@
              x:Class="mguerronExamen.Views.vRegistro"
              Title="vRegistro">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Label x:Name="lblUsuarioConectado"
+               Text="Usuario conectado:" />
+
+        <Label Text="REGISTRO"
+               TextColor="Blue"
+               FontSize="22"
+               HorizontalOptions="Center" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+
+            <Label Text="Apellido"
+                   Grid.Row="0"
+                   Grid.Column="1" />
+
+            <Label Text="Edad"
+                   Grid.Row="0"
+                   Grid.Column="2" />
+
+            <Entry x:Name="txtNombre"
+                   Placeholder="Ingresar Nombre"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+
+            <Entry x:Name="txtApellido"
+                   Placeholder="Ingresar Apellido"
+                   Grid.Row="1"
+                   Grid.Column="1" />
+
+            <Entry x:Name="txtEdad"
+                   Placeholder="Ingresar Edad"
+                   Keyboard="Numeric"
+                   Grid.Row="1"
+                   Grid.Column="2" />
+
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Fecha de inicio"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+
+            <DatePicker x:Name="dtpFechaInicio"
+                        Grid.Row="0"
+                        Grid.Column="1" />
+
+            <Label Text="Plan"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+
+            <Picker x:Name="pckPlan"
+                    Title="Seleccionar plan"
+                    Grid.Row="1"
+                    Grid.Column="1">
+
+                <Picker.Items>
+                    <x:String>Musculación</x:String>
+                    <x:String>Cardio</x:String>
+                    <x:String>Crossfit</x:String>
+                    <x:String>Full</x:String>
+                </Picker.Items>
+
+            </Picker>
+
+            <Label Text="Casillero"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+
+            <Switch x:Name="swCasillero"
+                    Grid.Row="2"
+                    Grid.Column="1" />
+
+            <Label Text="Monto Inicial"
+                   Grid.Row="3"
+                   Grid.Column="0" />
+
+            <Entry x:Name="txtMontoInicial"
+                   Placeholder="120 - 600"
+                   Keyboard="Numeric"
+                   Grid.Row="3"
+                   Grid.Column="1" />
+
+            <Button Text="Calcular Pago mensual"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Clicked="btnCalcular_Clicked" />
+
+            <Entry x:Name="txtPagoMensual"
+                   Placeholder="Pago mensual"
+                   IsReadOnly="True"
+                   Grid.Row="4"
+                   Grid.Column="1" />
+
+        </Grid>
+
+        <Button Text="Ver Resumen"
+                Clicked="btnVerResumen_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>

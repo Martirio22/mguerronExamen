@@ -4,9 +4,51 @@
              x:Class="mguerronExamen.Views.vLogin"
              Title="vLogin">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Image Source="smartfit.jpg" WidthRequest="130" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO:"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+
+            <Label Text="CONTRASEÑA:"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese usuario"
+                   Grid.Row="0"
+                   Grid.Column="1" />
+
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingrese contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1" />
+
+            <Button Text="INICIAR SESIÓN"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Clicked="btnIniciarSesion_Clicked" />
+
+            <Button Text="ACERCA DE"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Clicked="btnAcercaDe_Clicked" />
+
+        </Grid>
+
     </VerticalStackLayout>
 </ContentPage>

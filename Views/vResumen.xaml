@@ -4,9 +4,112 @@
              x:Class="mguerronExamen.Views.vResumen"
              Title="vResumen">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Label x:Name="lblUsuarioConectado"
+               Text="Usuario conectado:" />
+
+        <Label Text="RESUMEN" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblNombre"
+                   Grid.Row="0"
+                   Grid.Column="1" />
+
+            <Label Text="Apellido"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblApellido"
+                   Grid.Row="1"
+                   Grid.Column="1" />
+
+            <Label Text="Edad"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblEdad"
+                   Grid.Row="2"
+                   Grid.Column="1" />
+
+            <Label Text="Fecha de inicio"
+                   Grid.Row="3"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblFechaInicio"
+                   Grid.Row="3"
+                   Grid.Column="1" />
+
+            <Label Text="Plan"
+                   Grid.Row="4"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblPlan"
+                   Grid.Row="4"
+                   Grid.Column="1" />
+
+            <Label Text="Casillero"
+                   Grid.Row="5"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblCasillero"
+                   Grid.Row="5"
+                   Grid.Column="1" />
+
+            <Label Text="Monto Inicial"
+                   Grid.Row="6"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblMontoInicial"
+                   Grid.Row="6"
+                   Grid.Column="1" />
+
+            <Label Text="Pago mensual"
+                   Grid.Row="7"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblPagoMensual"
+                   Grid.Row="7"
+                   Grid.Column="1" />
+
+            <Label Text="Pago Total"
+                   Grid.Row="8"
+                   Grid.Column="0" />
+
+            <Label x:Name="lblPagoTotal"
+                   Grid.Row="8"
+                   Grid.Column="1" />
+
+        </Grid>
+
+        <Button Text="Nuevo registro"
+                Clicked="btnNuevoRegistro_Clicked" />
+
+        <Button Text="Cerrar sesión"
+                Clicked="btnCerrarSesion_Clicked" />
+
+        <Button Text="Exportar TXT"
+                Clicked="btnExportar_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>
